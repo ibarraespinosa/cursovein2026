@@ -1,32 +1,32 @@
-# Installation & Setup
+# Instalação e Configuração
 
-## Prerequisites
+## Pré-requisitos
 
-To use VEIN and follow this course, you will need the following installed:
+Para usar o VEIN e acompanhar este curso, você precisará ter o seguinte instalado:
 
-* R (download from [CRAN](https://cran.r-project.org/))
-* RStudio (download from [Posit](https://posit.co/download/rstudio-desktop/))
+- R (baixe pelo [CRAN](https://cran.r-project.org/))
+- RStudio (baixe pelo [Posit](https://posit.co/download/rstudio-desktop/))
 
-## Required Packages
+## Pacotes Obrigatórios
 
-To begin the course, make sure to install all the spatial libraries that VEIN relies upon.
+Para iniciar o curso, certifique-se de instalar todas as bibliotecas espaciais das quais o VEIN depende.
 
 ```R
 install.packages(c("sf", "stars", "units", "lwgeom"))
 ```
 
-Then install VEIN from GitHub or CRAN:
+Em seguida, instale o VEIN a partir do GitHub ou do CRAN:
 
 ```R
 install.packages("remotes")
 remotes::install_github("atmoschem/vein")
 ```
 
-Verify your installation:
+Verifique a instalação:
 
 ```R
 library(vein)
 packageVersion("vein")
 ```
 
-Once you have verified the installation, you are ready to begin the **Introduction to VEIN** lesson.
+Uma vez verificada a instalação, você estará pronto para começar a lição **Introdução ao VEIN**.

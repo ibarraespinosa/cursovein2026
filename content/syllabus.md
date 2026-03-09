@@ -1,35 +1,35 @@
-# Course Syllabus: Vehicular Emissions Inventories with VEIN
+# Ementa do Curso: Inventários de Emissões Veiculares com VEIN
 
-Welcome to the **Vehicular Emissions Inventories** course, held at the Universidade de São Paulo (USP).
+Bem-vindo ao curso de **Inventários de Emissões Veiculares**, realizado na Universidade de São Paulo (USP).
 
-## Overview
+## Visão Geral
 
-This course provides comprehensive training on estimating vehicular emissions using the **VEIN** R package. You will learn to compile bottom-up emissions inventories by seamlessly integrating traffic data, emission factors, and spatial allocation techniques.
+Este curso oferece treinamento abrangente sobre a estimativa de emissões veiculares usando o pacote **VEIN** em R. Você aprenderá a compilar inventários de emissões bottom-up integrando continuamente dados de tráfego, fatores de emissão e técnicas de alocação espacial.
 
-## Objectives
+## Objetivos
 
-- Understand the fundamentals of compiling vehicular emission inventories.
-- Learn how to integrate spatial traffic data using `sf` and data analysis in R.
-- Master the application of built-in and customized emission factors.
-- Perform spatial and temporal allocation of emissions for air quality modeling.
+- Entender os fundamentos da compilação de inventários de emissão veicular.
+- Aprender a integrar dados espaciais de tráfego usando `sf` e análise de dados no R.
+- Dominar a aplicação de fatores de emissão integrados e personalizados.
+- Realizar a alocação espacial e temporal das emissões para modelagem de qualidade do ar.
 
-## Target Audience
+## Público-Alvo
 
-Researchers, atmospheric scientists, environmental engineers, and students interested in air quality and transportation emissions at USP.
+Pesquisadores, cientistas atmosféricos, engenheiros ambientais e estudantes interessados em qualidade do ar e emissões de transporte na USP.
 
-## Course Structure
+## Estrutura do Curso
 
-1. **Introduction to VEIN:** Setup and overview of capabilities.
-2. **Traffic Modeling:** Handling flow, speed matrices, and traffic simulations.
-3. **Emission Factors:** Exploring local and international factors (e.g., CETESB, EEA).
-4. **Spatial Allocation:** Gridding emissions for models like WRF-Chem or CMAQ.
+1. **Introdução ao VEIN:** Configuração e visão geral dos recursos.
+2. **Modelagem de Tráfego:** Lidar com fluxo, matrizes de velocidade e simulações de tráfego.
+3. **Fatores de Emissão:** Explorar fatores locais e internacionais (ex: CETESB, EEA).
+4. **Alocação Espacial:** Distribuir emissões em grades para modelos como WRF-Chem ou CMAQ.
 
-## Requirements
+## Requisitos
 
-- Basic knowledge of the **R programming language**.
-- Understanding of **spatial data (GIS)** concepts.
-- R and RStudio installed on your local machine.
+- Conhecimento básico da **linguagem de programação R**.
+- Compreensão de conceitos de **dados espaciais (GIS)**.
+- R e RStudio instalados na sua máquina local.
 
 ---
 
-*This syllabus is rendered from `content/syllabus.md`. You can edit this file to update the content in real time.*
+*Esta ementa é renderizada do arquivo `content/syllabus.md`. Você pode editar esse arquivo para atualizar o conteúdo em tempo real.*

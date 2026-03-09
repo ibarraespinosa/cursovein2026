@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEIN - Vehicular Emissions Inventories | USP</title>
-    <meta name="description" content="Course on Vehicular Emissions Inventories using the VEIN R package at Universidade de São Paulo.">
+    <title>VEIN - Inventários de Emissões Veiculares | USP</title>
+    <meta name="description" content="Curso sobre Inventários de Emissões Veiculares usando o pacote VEIN em R na Universidade de São Paulo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -21,9 +21,9 @@
                 <span class="logo-text">VEIN<span class="highlight">Course</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="course.html?page=syllabus">Syllabus</a></li>
-                <li><a href="course.html?page=lesson1">Lessons</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="course.html?page=syllabus">Ementa</a></li>
+                <li><a href="course.html?page=lesson1">Lições</a></li>
                 <li><a href="https://atmoschem.github.io/vein/" target="_blank">Docs ↗</a></li>
                 <li><a href="https://github.com/atmoschem/vein" target="_blank">GitHub ↗</a></li>
             </ul>
@@ -33,28 +33,29 @@
     <main class="hero">
         <div class="hero-content">
             <div class="badge">Universidade de São Paulo (USP)</div>
-            <h1 class="hero-title">Master Vehicular<br>Emissions with <span class="gradient-text">VEIN</span></h1>
+            <h1 class="hero-title">Domine as Emissões<br>Veiculares com o <span class="gradient-text">VEIN</span></h1>
             <p class="hero-description">
-                A modern course teaching the estimation of vehicular emissions using the VEIN R package. 
-                Learn to compile comprehensive bottom-up emissions inventories.
+                Um curso moderno ensinando a estimativa de emissões veiculares usando o pacote VEIN em R. 
+                Aprenda a compilar inventários de emissões bottom-up abrangentes.
             </p>
             <div class="hero-actions">
-                <a href="course.html?page=lesson1" class="btn btn-primary">Start Learning</a>
-                <a href="course.html?page=syllabus" class="btn btn-secondary">View Syllabus</a>
+                <a href="course.html?page=lesson1" class="btn btn-primary">Comece a Aprender</a>
+                <a href="course.html?page=syllabus" class="btn btn-secondary">Ver Ementa</a>
+                <a href="course.html?page=intro" class="btn btn-secondary">Introdução</a>
             </div>
             
             <div class="stats-container">
                 <div class="stat-card">
-                    <h3>Data Science</h3>
-                    <p>Integrate spatial traffic data</p>
+                    <h3>Ciência de Dados</h3>
+                    <p>Integre dados espaciais de tráfego</p>
                 </div>
                 <div class="stat-card">
-                    <h3>Environment</h3>
-                    <p>Estimate precise pollutants</p>
+                    <h3>Meio Ambiente</h3>
+                    <p>Estime poluentes com precisão</p>
                 </div>
                 <div class="stat-card">
-                    <h3>Open Source</h3>
-                    <p>Powered by R</p>
+                    <h3>Código Aberto</h3>
+                    <p>Desenvolvido em R</p>
                 </div>
             </div>
         </div>
@@ -66,11 +67,11 @@
                     <span class="dot dot-y"></span>
                     <span class="dot dot-g"></span>
                 </div>
-                <pre><code><span class="cm"># Install VEIN</span>
+                <pre><code><span class="cm"># Instalar o VEIN</span>
 <span class="kw">install.packages</span>(<span class="st">"vein"</span>)
 <span class="kw">library</span>(vein)
 
-<span class="cm"># Estimate emissions</span>
+<span class="cm"># Estimar emissões</span>
 emisions &lt;- <span class="kw">emis</span>(
   veh = <span class="st">"PC"</span>, 
   size = <span class="st">"&lt;1400cc"</span>, 
@@ -85,33 +86,33 @@ emisions &lt;- <span class="kw">emis</span>(
     </main>
 
     <section class="features" id="features">
-        <h2 class="section-title">Why use VEIN?</h2>
+        <h2 class="section-title">Por que usar o VEIN?</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🚗</div>
-                <h3>Traffic Integration</h3>
-                <p>Read matrices of traffic data, apply traffic simulations, and merge spatial data seamlessly.</p>
+                <h3>Integração de Tráfego</h3>
+                <p>Leia matrizes de dados de tráfego, aplique simulações de tráfego e una dados espaciais de forma contínua.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📊</div>
-                <h3>Emission Factors</h3>
-                <p>Includes built-in emission factors and functions to input your own customized formulas and tables.</p>
+                <h3>Fatores de Emissão</h3>
+                <p>Inclui fatores de emissão integrados e funções para inserir suas próprias fórmulas e tabelas personalizadas.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🗺️</div>
-                <h3>Spatial Allocation</h3>
-                <p>Distribute emissions in grid cells using the `sf` package to generate gridded inventories.</p>
+                <h3>Alocação Espacial</h3>
+                <p>Distribua emissões em células de grade usando o pacote `sf` para gerar inventários em grade.</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
-            <p>Course created for Universidade de São Paulo (USP).</p>
-            <p>Built with <a href="https://atmoschem.github.io/vein/">VEIN</a>.</p>
+            <p>Curso criado para a Universidade de São Paulo (USP).</p>
+            <p>Desenvolvido com <a href="https://atmoschem.github.io/vein/">VEIN</a>.</p>
         </div>
     </footer>
     
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
