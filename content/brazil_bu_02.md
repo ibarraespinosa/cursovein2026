@@ -1,70 +1,54 @@
-# Módulo 1: Introdução ao VEIN
+# config.R
 
-Bem-vindo ao _curso_ do VEIN. Nesta lição, exploraremos o que é o pacote R **VEIN** e como começar.
+```
+options(encoding = "UTF-8")
+library(vein) # vein
+library(sf) # spatial data
+library(cptcity) # 7120 colour palettes
+library(ggplot2) # plots
+library(eixport) # WRF Chem
+library(data.table) # blasting speed
+library(units)
+sessionInfo()
 
-## O que é o VEIN?
+# 0 Configuration
 
-VEIN (Vehicular Emissions Inventories) é um pacote R desenvolvido para estimar emissões veiculares de forma abrangente. Ele abrange a modelagem bottom-up:
+language <- "portuguese" # english spanish
+path <- "config/inventory.xlsx"
+readxl::excel_sheets(path) # For libre office, readODS::read_ods()
+metadata <- readxl::read_xlsx(path = path, sheet = "metadata")
+mileage <- readxl::read_xlsx(path = path, sheet = "mileage")
+tfs <- readxl::read_xlsx(path = path, sheet = "tfs")
+veh <- readxl::read_xlsx(path = path, sheet = "fleet_age")
+fuel <- readxl::read_xlsx(path = path, sheet = "fuel")
+met <- readxl::read_xlsx(path = path, sheet = "met")
+s <- readxl::read_xlsx(path = path, sheet = "s")
+im_ok <- readxl::read_xlsx(path = path, sheet = "im_ok")
+im_co <- readxl::read_xlsx(path = path, sheet = "im_co")
+im_hc <- readxl::read_xlsx(path = path, sheet = "im_hc")
+im_nox <- readxl::read_xlsx(path = path, sheet = "im_nox")
+im_pm <- readxl::read_xlsx(path = path, sheet = "im_pm")
+year <- 2018
+theme <- "black" # dark clean ink
+scale <- "default"
+delete_directories <- TRUE
+source("config/config.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-- Entrada de dados espaciais precisos de tráfego (classe `sf`)
-- Associação de matrizes temporais aos segmentos de tráfego
-- Estimativa de fatores de emissão baseados em combustível, tecnologia e definições locais
-- Cálculo dinâmico de emissões
-
-## Instalação
-
-Para começar, você precisa instalar o pacote a partir do CRAN.
-
-```r
-# Instalar via CRAN
-install.packages("vein")
-
-# Alternativamente, instalar a versão de desenvolvimento do GitHub
-install.packages("remotes")
-remotes::install_github("atmoschem/vein")
 ```
 
-Uma vez instalado, basta carregar o pacote:
+A confiuracao do inventario estao no arquivo excel config/inventory.xlsx, com as seguintes folhas:
 
-```r
-library(vein)
-packageVersion("vein")
-```
-
-## Estrutura Básica
-
-A compilação de um inventário inclui várias etapas sequenciais dentro do VEIN:
-
-1. **Modelagem de Tráfego:** Preparar uma rede viária explicitamente.
-2. **Distribuição de Velocidade:** Associar dados de velocidade aos veículos em cada segmento.
-3. **Frota de Veículos:** Especificar idades, uso e degradação dos veículos.
-4. **Fatores de Emissão:** Selecionar equações ou tabelas apropriadas que representam as emissões (por exemplo, dados da CETESB para o Brasil).
-5. **Emissões:** Calcular resultados precisos em unidades de massa.
-6. **Alocação Espacial (Gridding):** Agregar resultados em unidades espaciais para modelagem atmosférica.
-
-### Exemplo: Plotando Dados
-
-O VEIN, usando sf, fornece métodos fáceis de usar para plotar dados espaciais:
-
-```r
-plot(net["capacity"], main="Capacidade da Rede Viária", axes = T)
-```
-
-![](https://i.imgur.com/iB39c0q.png)
-
-## Projetos
-
-VEIN tem muitos projetos que podem ser carregados facilmente. Mas neste curso a gente vai trabalhar com dois, especificamente:
-
-- "brazil": que e o projeto de Sao Paulo
-- "brazil_td": que e o projeto do Brasil
-
-> **Plano de Trabalho**: O primeiro dia vamos rodar o projeto de Sao Paulo, que e um projeto menor e mais facil de entender. Como tarefa, os estudantes vao rodar o segundo projeto que toma mais tempo e na semana a seguir, vamos analiar os resultados. Os estudantes vao apresnetar os resultados.
-
-```r
-get_project(directory = "brazil_bu", case = "brazil")
-```
-
-```r
-get_project(directory = "brazil_td", case = "brazil_td")
-```
+- metadata: Inclui as definicoes dos tipos de veiculos.
+- fleet_age: Inclui as definicoes da frota de veiculos.
+- tfs: Inclui fatores de expansao temporal.
+- mileage: Inclui o quilometragem dos veiculos.
+- fuel: Inclui as vendas de combustivel.
+- met: Inclui informacao meteorologica.
+- s: Inclui as informacoes de enxofre.
+- im_ok: Inclui a percentagem dos veiculos que passariam uma inspeção veicular.
+- im_co: Inclui as dos veiculos que passariam uma inspeção veicular.
+- im_hc: Inclui as dos veiculos que passariam uma inspeção veicular.
+- im_nox: Inclui as dos veiculos que passariam uma inspeção veicular.
+- im_pm: Inclui as dos veiculos que passariam uma inspeção veicular.

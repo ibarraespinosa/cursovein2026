@@ -1,70 +1,210 @@
-# Módulo 1: Introdução ao VEIN
+# main.R
 
-Bem-vindo ao _curso_ do VEIN. Nesta lição, exploraremos o que é o pacote R **VEIN** e como começar.
+A seguir vamos mostrar o conteudo de main.R e logo em subseccoes o que cada parte do codigo faz incluindo saindas.
 
-## O que é o VEIN?
+Primeiro precisamos carregar aslivrerias e instalar elas se nao estiverem instaladas.
 
-VEIN (Vehicular Emissions Inventories) é um pacote R desenvolvido para estimar emissões veiculares de forma abrangente. Ele abrange a modelagem bottom-up:
-
-- Entrada de dados espaciais precisos de tráfego (classe `sf`)
-- Associação de matrizes temporais aos segmentos de tráfego
-- Estimativa de fatores de emissão baseados em combustível, tecnologia e definições locais
-- Cálculo dinâmico de emissões
-
-## Instalação
-
-Para começar, você precisa instalar o pacote a partir do CRAN.
-
-```r
-# Instalar via CRAN
-install.packages("vein")
-
-# Alternativamente, instalar a versão de desenvolvimento do GitHub
-install.packages("remotes")
-remotes::install_github("atmoschem/vein")
 ```
+options(encoding = "UTF-8")
+library(vein) # vein
+library(sf) # spatial data
+library(cptcity) # 7120 colour palettes
+library(ggplot2) # plots
+library(eixport) # WRF Chem
+library(data.table) # blasting speed
+library(units)
+sessionInfo()
 
-Uma vez instalado, basta carregar o pacote:
+# 0 Configuration
+language <- "portuguese" # english spanish
+path <- "config/inventory.xlsx"
+readxl::excel_sheets(path) # For libre office, readODS::read_ods()
+metadata <- readxl::read_xlsx(path = path, sheet = "metadata")
+mileage <- readxl::read_xlsx(path = path, sheet = "mileage")
+tfs <- readxl::read_xlsx(path = path, sheet = "tfs")
+veh <- readxl::read_xlsx(path = path, sheet = "fleet_age")
+fuel <- readxl::read_xlsx(path = path, sheet = "fuel")
+met <- readxl::read_xlsx(path = path, sheet = "met")
+s <- readxl::read_xlsx(path = path, sheet = "s")
+im_ok <- readxl::read_xlsx(path = path, sheet = "im_ok")
+im_co <- readxl::read_xlsx(path = path, sheet = "im_co")
+im_hc <- readxl::read_xlsx(path = path, sheet = "im_hc")
+im_nox <- readxl::read_xlsx(path = path, sheet = "im_nox")
+im_pm <- readxl::read_xlsx(path = path, sheet = "im_pm")
+year <- 2018
+theme <- "black" # dark clean ink
+scale <- "default"
+delete_directories <- TRUE
+source("config/config.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-```r
-library(vein)
-packageVersion("vein")
-```
+# 1) Network ####
+language <- "portuguese" # english spanish
+net <- sf::st_read("network/net.gpkg")
+crs <- 31983
+tit <- "Fluxo veicular [veh/h] em São Paulo"
+categories <- c("pc", "lcv", "trucks", "bus", "mc") # in network/net.gpkg
+source("scripts/net.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-## Estrutura Básica
+# 2) Traffic ####
+language <- "portuguese" # english spanish
+net <- readRDS("network/net.rds")
+metadata <- readRDS("config/metadata.rds")
+categories <- c("pc", "lcv", "trucks", "bus", "mc") # in network/net.gpkg
+veh <- readRDS("config/fleet_age.rds")
+verbose <- FALSE
+theme <- "black" # dark clean ink
+k_G <- k_E <- k_D <- 1
+survival <- FALSE
+source("scripts/traffic.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-A compilação de um inventário inclui várias etapas sequenciais dentro do VEIN:
+# 3) Estimation ####
+language <- "portuguese" # english spanish
+metadata <- readRDS("config/metadata.rds")
+mileage <- readRDS("config/mileage.rds")
+tfs <- readRDS("config/tfs.rds")
+veh <- readRDS("config/fleet_age.rds")
+met <- readRDS("config/met.rds")
+net <- readRDS("network/net.rds")
+lkm <- net$lkm
+verbose <- FALSE
+s <- readRDS("config/s.rds")
 
-1. **Modelagem de Tráfego:** Preparar uma rede viária explicitamente.
-2. **Distribuição de Velocidade:** Associar dados de velocidade aos veículos em cada segmento.
-3. **Frota de Veículos:** Especificar idades, uso e degradação dos veículos.
-4. **Fatores de Emissão:** Selecionar equações ou tabelas apropriadas que representam as emissões (por exemplo, dados da CETESB para o Brasil).
-5. **Emissões:** Calcular resultados precisos em unidades de massa.
-6. **Alocação Espacial (Gridding):** Agregar resultados em unidades espaciais para modelagem atmosférica.
+# Fuel eval
+language <- "portuguese" # english spanish
+fuel <- readRDS("config/fuel.rds")
+pol <- "FC"
+factor_emi <- 365 / (nrow(tfs) / 24) # daily to annual
+source("scripts/fuel_eval.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-### Exemplo: Plotando Dados
+# Exhaust
+language <- "portuguese" # english spanish
+metadata <- readRDS("config/metadata.rds")
+mileage <- readRDS("config/mileage.rds")
+tfs <- readRDS("config/tfs.rds")
+veh <- readRDS("config/fleet_age.rds")
+met <- readRDS("config/met.rds")
+net <- readRDS("network/net.rds")
+lkm <- net$lkm
+scale <- "tunnel"
+verbose <- FALSE
+s <- readRDS("config/s.rds")
+fuel <- readRDS("config/fuel.rds")
+IM <- FALSE
+pol <- c(
+  "CO",
+  "HC",
+  "NMHC",
+  "NOx",
+  "CO2",
+  "PM",
+  "NO2",
+  "NO",
+  "NH3",
+  "SO2",
+  "ETOH",
+  "N2O",
+  "CH4"
+)
+source("scripts/exhaust.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-O VEIN, usando sf, fornece métodos fáceis de usar para plotar dados espaciais:
+# Evaporatives
+language <- "portuguese" # english spanish
+metadata <- readRDS("config/metadata.rds")
+mileage <- readRDS("config/mileage.rds")
+tfs <- readRDS("config/tfs.rds")
+veh <- readRDS("config/fleet_age.rds")
+met <- readRDS("config/met.rds")
+net <- readRDS("network/net.rds")
+lkm <- net$lkm
+verbose <- FALSE
+year <- veh$Year[1]
+source("scripts/evaporatives.R", encoding = "UTF-8", echo = F)
+rm(list = ls())
+gc()
 
-```r
-plot(net["capacity"], main="Capacidade da Rede Viária", axes = T)
-```
+# Tyres, Breaks and Road
+language <- "english" #portuguese english spanish
+metadata <- readRDS("config/metadata.rds")
+mileage <- readRDS("config/mileage.rds")
+tfs <- readRDS("config/tfs.rds")
+net <- readRDS("network/net.rds")
+veh <- readRDS("config/fleet_age.rds")
+pol <- c("PM2.5", "PM10")
+verbose <- FALSE
+source("scripts/wear.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-![](https://i.imgur.com/iB39c0q.png)
 
-## Projetos
+# 4) Post-estimation ####
+language <- "portuguese" # english spanish
+net <- readRDS("network/net.rds")
+tfs <- readRDS("config/tfs.rds")
+g <- eixport::wrf_grid("wrf/wrfinput_d02")
+# Number of lat points 51
+# Number of lon points 63
+crs <- 31983
+factor_emi <- 365 / (nrow(tfs) / 24) # daily to annual
+source("scripts/post.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
 
-VEIN tem muitos projetos que podem ser carregados facilmente. Mas neste curso a gente vai trabalhar com dois, especificamente:
+# # plots
+language <- "portuguese" # english spanish
+metadata <- readRDS("config/metadata.rds")
+tfs <- readRDS("config/tfs.rds")
+veh <- readRDS("config/fleet_age.rds")
+pol <- c("CO", "HC", "NOx", "CO2", "PM2.5", "PM10", "NH3")
+factor_emi <- 365 / (nrow(tfs) / 24) # daily to annual
+hours <- 8
+bg <- "white"
+pal <- "mpl_viridis" # procura mais paletas com ?cptcity::find_cpt
+breaks <- "quantile" # "sd" "quantile" "pretty"
+tit <- "Emissões veiculares em São Paulo"
+source("scripts/plots.R")
+rm(list = ls())
+gc()
 
-- "brazil": que e o projeto de Sao Paulo
-- "brazil_td": que e o projeto do Brasil
+# MECH ####
+mech <- "RADM2" # CB05opt2 "CB4", "CB05", "S99", "S7","CS7", "S7T", "S11", "S11D","S16C","S18B","RADM2", "RACM2","MOZT1"
+for (k in seq_along(mech)) {
+  language <- "english" # english spanish
+  net <- readRDS("network/net.rds")
+  g <- eixport::wrf_grid("wrf/wrfinput_d02")
+  type <- 'grids' #streets
+  pol <- c("CO", "NO", "NO2", "SO2", "NH3")
+  mol <- c(12 + 16, 14 + 16, 14 + 16 * 2, 32 + 16 * 2, 14 + 3)
+  aer <- "pm2023" # pmiag, pmneu
+  source("scripts/mech2.R", encoding = "UTF-8")
+}
+rm(list = ls())
+gc()
 
-> **Plano de Trabalho**: O primeiro dia vamos rodar o projeto de Sao Paulo, que e um projeto menor e mais facil de entender. Como tarefa, os estudantes vao rodar o segundo projeto que toma mais tempo e na semana a seguir, vamos analiar os resultados. Os estudantes vao apresnetar os resultados.
-
-```r
-get_project(directory = "brazil_bu", case = "brazil")
-```
-
-```r
-get_project(directory = "brazil_td", case = "brazil_td")
+# WRF CHEM
+# type only grids
+mech <- "RADM2"
+for (k in seq_along(mech)) {
+  language <- "portuguese" # english spanish
+  net <- readRDS("network/net.rds")
+  cols <- 63
+  rows <- 51
+  n_aero <- 15
+  wrf_times <- 24 #
+  pasta_wrfinput <- "wrf"
+  pasta_wrfchemi <- "wrf"
+  wrfi <- "wrf/wrfinput_d02"
+  domain <- 2
+  hours <- 0
+  source("scripts/wrf.R", encoding = "UTF-8")
+}
 ```

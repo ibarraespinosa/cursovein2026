@@ -1,0 +1,46 @@
+# Projeto brazil
+
+```r
+get_project(directory = "brazil_bu", case = "brazil")
+```
+
+Neste projeto vamos trabalhar com dados de emissões veiculares para a cidade de Sao Paulo, Brasil.
+
+Depois de rodar o comando acima, temos que _ir_ na pasta brazil_bu e rodar os scripts desde ali. Este e o working directory para rodar os scripts.
+
+Inside the folder brazil_bu, we have the following files:
+
+```
+ system(paste0("tree brazil_bu"))
+brazil_bu
+├── config
+│   ├── clean.R
+│   ├── config.R
+│   └── inventory.xlsx
+├── main.R
+├── main.Rproj
+├── network
+│   ├── net.gpkg
+│   └── net.rds
+├── scripts
+│   ├── evaporatives_hourly.R
+│   ├── evaporatives.R
+│   ├── exhaust.R
+│   ├── fuel_eval.R
+│   ├── mech2.R
+│   ├── mech2_streets.R
+│   ├── mech.R
+│   ├── net.R
+│   ├── pavedroads.R
+│   ├── plots.R
+│   ├── post.R
+│   ├── traffic.R
+│   ├── wear.R
+│   └── wrf.R
+└── wrf
+    └── wrfinput_d02
+
+5 directories, 23 files
+```
+
+O usuario deve abrir, editar e rodar os scripts main.R.

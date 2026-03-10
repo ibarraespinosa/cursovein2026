@@ -19,7 +19,7 @@ const courseStructure = [
             { 
                 id: "brazil_bu", 
                 title: "brazil_bu", 
-                file: "content/brazil_bu.md",
+                file: "content/brazil_bu_00.md",
                 subItems: [
                     { id: "brazil_bu_01", title: "main.R", file: "content/brazil_bu_01.md" },
                     { id: "brazil_bu_02", title: "config", file: "content/brazil_bu_02.md" },
