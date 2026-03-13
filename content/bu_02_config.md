@@ -55,7 +55,7 @@ A confiuracao do inventario estao no arquivo excel config/inventory.xlsx, com as
 
 A metadata inclui as definicoes dos tipos de veiculos. Embaixo voce pode ver a metadata. Aqui tem varios parametros como descripcao dos veiculos, viagems promedio por dia para calcular as emissoes evaporativas, ciclo de conducao, e parametros de sobreviencia.
 
-![](content/metadata1.png)
+![](content/figs/metadata1.png)
 
 ## Rodando o arquivo
 
@@ -335,7 +335,7 @@ dev.off()
 
 Aqui o plot de FUEL
 
-![](content/FUEL.png)
+![](content/figs/FUEL.png)
 
 ```
 # Fleet ####
@@ -374,7 +374,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the fleet
 
-![](content/FLEET_PC.png)
+![](content/figs/FLEET_PC.png)
 
 ```
 
@@ -414,7 +414,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the TFS
 
-![](content/TFS_PC.png)
+![](content/figs/TFS_PC.png)
 
 ```
 
@@ -455,7 +455,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the IM OK
 
-![](content/IM_OK_PC.png)
+![](content/figs/IM_OK_PC.png)
 
 ```
 # IM CO (reprov/Aprov) ####
@@ -495,7 +495,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the IM CO
 
-![](content/IM_REP_APR_CO_PC.png)
+![](content/figs/IM_REP_APR_CO_PC.png)
 
 ```
 # IM HC (reprov/Aprov) ####
@@ -601,7 +601,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the MILEAGE
 
-![](content/MILEAGE_PC.png)
+![](content/figs/MILEAGE_PC.png)
 
 ```
 # Mileage ####
@@ -640,7 +640,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the enxofre
 
-![](content/S_PC.png)
+![](content/figs/S_PC.png)
 
 ```
 
@@ -681,7 +681,7 @@ for (i in seq_along(n_veh)) {
 
 Agora vmaos ver o exemplo do plot the Temperature
 
-![](content/Temperature.png)
+![](content/figs/Temperature.png)
 
 ```
 

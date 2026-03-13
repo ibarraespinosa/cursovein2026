@@ -50,7 +50,7 @@ O VEIN, usando sf, fornece métodos fáceis de usar para plotar dados espaciais:
 plot(net["capacity"], main="Capacidade da Rede Viária", axes = T)
 ```
 
-![](content/iB39c0q.png)
+![](content/figs/iB39c0q.png)
 
 ## Projetos
 

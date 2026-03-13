@@ -3,13 +3,14 @@ const courseStructure = [
     {
         title: "Visão Geral",
         items: [
-            { id: "syllabus", title: "Ementa do Curso", file: "content/syllabus.md" },
-            { id: "setup", title: "Instalação e Configuração", file: "content/setup.md" },
-            { id: "intro", title: "Inventário de Emissões", file: "content/intro.md" }
+            { id: "dataehora", title: "Curso", file: "content/dataehora.md" },
+            { id: "syllabus", title: "Ementa", file: "content/syllabus.md" },
+            { id: "setup", title: "Instalação", file: "content/setup.md" },
+            { id: "intro", title: "Inventários", file: "content/intro.md" }
         ]
     },
     {
-        title: "Módulos",
+        title: "Conteúdo",
         items: [
             { 
                 id: "lesson1", 
@@ -19,19 +20,19 @@ const courseStructure = [
             { 
                 id: "brazil_bu", 
                 title: "brazil_bu", 
-                file: "content/brazil_bu_00.md",
+                file: "content/bu_00.md",
                 subItems: [
-                    { id: "brazil_bu_01", title: "main.R", file: "content/brazil_bu_01.md" },
-                    { id: "brazil_bu_02", title: "config", file: "content/brazil_bu_02.md" },
-                    { id: "brazil_bu_03", title: "traffic", file: "content/brazil_bu_03.md" },
-                    { id: "brazil_bu_04", title: "fuel_eval", file: "content/brazil_bu_04.md" },
-                    { id: "brazil_bu_05", title: "exhaust", file: "content/brazil_bu_05.md" },
-                    { id: "brazil_bu_06", title: "evaporative", file: "content/brazil_bu_06.md" },
-                    { id: "brazil_bu_07", title: "wear", file: "content/brazil_bu_07.md" },
-                    { id: "brazil_bu_08", title: "post", file: "content/brazil_bu_08.md" },
-                    { id: "brazil_bu_09", title: "plots", file: "content/brazil_bu_09.md" },
-                    { id: "brazil_bu_10", title: "chemical mechanism", file: "content/brazil_bu_10.md" },
-                    { id: "brazil_bu_11", title: "wrf chem", file: "content/brazil_bu_11.md" }
+                    { id: "brazil_bu_01", title: "main.R", file: "content/bu_01_main.md" },
+                    { id: "brazil_bu_02", title: "config", file: "content/bu_02_config.md" },
+                    { id: "brazil_bu_03", title: "net", file: "content/bu_03_net.md" },
+                    { id: "brazil_bu_04", title: "traffic", file: "content/bu_04_traffic.md" },
+                    { id: "brazil_bu_05", title: "fuel_eval", file: "content/bu_05.md" },
+                    { id: "brazil_bu_06", title: "exhaust", file: "content/bu_06.md" },
+                    { id: "brazil_bu_07", title: "evaporative", file: "content/bu_07.md" },
+                    { id: "brazil_bu_08", title: "wear", file: "content/bu_08.md" },
+                    { id: "brazil_bu_09", title: "post", file: "content/bu_09.md" },
+                    { id: "brazil_bu_10", title: "plots", file: "content/bu_10.md" },
+                    { id: "brazil_bu_11", title: "chemical mechanism", file: "content/bu_11.md" }
                 ]
             },
             { 

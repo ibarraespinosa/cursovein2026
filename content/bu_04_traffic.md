@@ -1,5 +1,21 @@
 # traffic.R
 
+```
+# 2) Traffic ####
+language <- "portuguese" # english spanish
+net <- readRDS("network/net.rds")
+metadata <- readRDS("config/metadata.rds")
+categories <- c("pc", "lcv", "trucks", "bus", "mc") # in network/net.gpkg
+veh <- readRDS("config/fleet_age.rds")
+verbose <- FALSE
+theme <- "black" # dark clean ink
+k_G <- k_E <- k_D <- 1
+survival <- FALSE
+source("scripts/traffic.R", encoding = "UTF-8")
+rm(list = ls())
+gc()
+```
+
 Primeiro vamos conferir os nomes das categorias veiculares.
 
 ```
@@ -134,7 +150,7 @@ colplot(
 dev.off()
 ```
 
-![FLOW PC](content/FLOW_PC.png)
+![FLOW PC](content/figs/FLOW_PC.png)
 
 ```
 
@@ -355,7 +371,13 @@ colplot(
   theme = theme
 )
 dev.off()
+```
 
+Agora plotando as categorias
+
+![TRAFFIC](content/figs/TRAFFIC.png)
+
+```
 # plots ####
 switch(language,
   "portuguese" = cat("Plotando composição veicular\n"),
