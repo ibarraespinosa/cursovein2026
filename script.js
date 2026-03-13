@@ -26,15 +26,16 @@ const courseStructure = [
                     { id: "brazil_bu_02", title: "config", file: "content/bu_02_config.md" },
                     { id: "brazil_bu_03", title: "net", file: "content/bu_03_net.md" },
                     { id: "brazil_bu_04", title: "traffic", file: "content/bu_04_traffic.md" },
-                    { id: "brazil_bu_05", title: "fuel_eval", file: "content/bu_05.md" },
-                    { id: "brazil_bu_06", title: "exhaust", file: "content/bu_06.md" },
-                    { id: "brazil_bu_07", title: "evaporative", file: "content/bu_07.md" },
-                    { id: "brazil_bu_08", title: "wear", file: "content/bu_08.md" },
-                    { id: "brazil_bu_09", title: "post", file: "content/bu_09.md" },
-                    { id: "brazil_bu_10", title: "plots", file: "content/bu_10.md" },
-                    { id: "brazil_bu_11", title: "chemical mechanism", file: "content/bu_11.md" }
+//                    { id: "brazil_bu_05", title: "fuel_eval", file: "content/bu_05.md" },
+//                    { id: "brazil_bu_06", title: "exhaust", file: "content/bu_06.md" },
+//                    { id: "brazil_bu_07", title: "evaporative", file: "content/bu_07.md" },
+//                    { id: "brazil_bu_08", title: "wear", file: "content/bu_08.md" },
+//                    { id: "brazil_bu_09", title: "post", file: "content/bu_09.md" },
+//                    { id: "brazil_bu_10", title: "plots", file: "content/bu_10.md" },
+//                    { id: "brazil_bu_11", title: "chemical mechanism", file: "content/bu_11.md" }
                 ]
             },
+/*
             { 
                 id: "lesson2", 
                 title: "Modelagem de Tráfego", 
@@ -45,6 +46,7 @@ const courseStructure = [
             },
             { id: "lesson3", title: "Fatores de Emissão", file: "content/lesson3.md" },
             { id: "lesson4", title: "Alocação Espacial", file: "content/lesson4.md" }
+*/
         ]
     }
 ];
