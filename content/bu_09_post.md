@@ -1,6 +1,6 @@
 # post.R
 
-Aqui vamos a procesar as emissoes ja estimadas.
+Aqui vamos a procesar as emissoes ja estimadas. As emissoes vao ser processadas por rua e por grade e serao agregadas as emissoes em formato long. A grade vai ser obtida a partir do arquivo wrfinput_d02.
 
 ```
 # 4) Post-estimation ####
@@ -19,7 +19,7 @@ gc()
 
 ```
 
-Mesta parte a gente usa [ef_wear](https://atmoschem.github.io/vein/reference/ef_wear.html).
+Embaixo se mostra o post.R
 
 ```
 # grade

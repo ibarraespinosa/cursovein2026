@@ -30,22 +30,39 @@ const courseStructure = [
                     { id: "brazil_bu_06", title: "exhaust", file: "content/bu_06_ex.md" },
                     { id: "brazil_bu_07", title: "evaporative", file: "content/bu_07_ev.md" },
                     { id: "brazil_bu_08", title: "wear", file: "content/bu_08_wear.md" },
-                    { id: "brazil_bu_09", title: "post", file: "content/bu_09.md" },
-                    { id: "brazil_bu_10", title: "plots", file: "content/bu_10.md" },
-                    { id: "brazil_bu_11", title: "mechanism", file: "content/bu_11.md" },
+                    { id: "brazil_bu_09", title: "post", file: "content/bu_09_post.md" },
+                    { id: "brazil_bu_10", title: "plots", file: "content/bu_10_plot.md" },
+                    { id: "brazil_bu_11", title: "mechanism", file: "content/bu_11_mech.md" },
                     { id: "brazil_bu_12", title: "wrf", file: "content/bu_12_wrf.md" }
                 ]
             },
             { 
-                id: "lesson2", 
-                title: "Modelagem de Tráfego", 
-                file: "content/lesson2.md",
+                id: "brazil_td", 
+                title: "brazil_td", 
+                file: "content/td_00.md",
                 subItems: [
-                    { id: "lesson2-task1", title: "Configuração da Modelagem", file: "content/lesson2_task1.md" }
+                    { id: "brazil_td_01", title: "main.R", file: "content/td_01_main.md" },
+                    { id: "brazil_td_02", title: "config", file: "content/td_02_config.md",
+                        subItems: [
+                            { id: "brazil_td_02_fleet", title: "fleet", file: "content/td_02_fleet.md" },
+                            { id: "brazil_td_02_fuel", title: "fuel", file: "content/td_02_fuel.md" },
+                            { id: "brazil_td_02_mileage", title: "mileage", file: "content/td_02_mileage.md" },
+                            { id: "brazil_td_02_met", title: "met", file: "content/td_02_met.md" },
+                            { id: "brazil_td_02_pre", title: "pre_main", file: "content/td_02_pre.md" }
+                        ]
+                    },
+                    { id: "brazil_td_03", title: "net", file: "content/td_03_net.md" },
+                    { id: "brazil_td_04", title: "traffic", file: "content/td_04_traffic.md" },
+                    { id: "brazil_td_05", title: "fuel_eval", file: "content/td_05_fuel.md" },
+                    { id: "brazil_td_06", title: "exhaust", file: "content/td_06_ex.md" },
+                    { id: "brazil_td_07", title: "evaporative", file: "content/td_07_ev.md" },
+                    { id: "brazil_td_08", title: "wear", file: "content/td_08_wear.md" },
+                    { id: "brazil_td_09", title: "post", file: "content/td_09_post.md" },
+                    { id: "brazil_td_10", title: "plots", file: "content/td_10_plot.md" },
+                    { id: "brazil_td_11", title: "mechanism", file: "content/td_11_mech.md" },
+                    { id: "brazil_td_12", title: "wrf", file: "content/td_12_wrf.md" }
                 ]
-            },
-            { id: "lesson3", title: "Fatores de Emissão", file: "content/lesson3.md" },
-            { id: "lesson4", title: "Alocação Espacial", file: "content/lesson4.md" }
+            }        
         ]
     }
 ];
