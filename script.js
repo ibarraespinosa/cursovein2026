@@ -41,26 +41,28 @@ const courseStructure = [
                 title: "brazil_td", 
                 file: "content/td_00.md",
                 subItems: [
-                    { id: "brazil_td_01", title: "main.R", file: "content/td_01_main.md" },
-                    { id: "brazil_td_02", title: "config", file: "content/td_02_config.md",
+                    { id: "brazil_td_01", title: "pre main", file: "content/td_01_main.md" ,
                         subItems: [
-                            { id: "brazil_td_02_fleet", title: "fleet", file: "content/td_02_fleet.md" },
-                            { id: "brazil_td_02_fuel", title: "fuel", file: "content/td_02_fuel.md" },
-                            { id: "brazil_td_02_mileage", title: "mileage", file: "content/td_02_mileage.md" },
-                            { id: "brazil_td_02_met", title: "met", file: "content/td_02_met.md" },
-                            { id: "brazil_td_02_pre", title: "pre_main", file: "content/td_02_pre.md" }
+                            { id: "brazil_td_02_fleet", title: "fleet", file: "content/td_02_config_fleet.md" },
+                            { id: "brazil_td_02_fuel", title: "fuel", file: "content/td_03_config_fuel.md" },
+                            { id: "brazil_td_02_mileage", title: "mileage", file: "content/td_04_config_mileage.md" },
+                            { id: "brazil_td_02_met", title: "met", file: "content/td_05_config_met.md" },
+                            { id: "brazil_td_02_pre", title: "pre_main", file: "content/td_06_config_main.md" }
                         ]
                     },
-                    { id: "brazil_td_03", title: "net", file: "content/td_03_net.md" },
-                    { id: "brazil_td_04", title: "traffic", file: "content/td_04_traffic.md" },
-                    { id: "brazil_td_05", title: "fuel_eval", file: "content/td_05_fuel.md" },
-                    { id: "brazil_td_06", title: "exhaust", file: "content/td_06_ex.md" },
-                    { id: "brazil_td_07", title: "evaporative", file: "content/td_07_ev.md" },
-                    { id: "brazil_td_08", title: "wear", file: "content/td_08_wear.md" },
-                    { id: "brazil_td_09", title: "post", file: "content/td_09_post.md" },
-                    { id: "brazil_td_10", title: "plots", file: "content/td_10_plot.md" },
-                    { id: "brazil_td_11", title: "mechanism", file: "content/td_11_mech.md" },
-                    { id: "brazil_td_12", title: "wrf", file: "content/td_12_wrf.md" }
+                    { id: "brazil_td_03", title: "main.R", file: "content/td_00_year_main.md" },
+                    { id: "brazil_td_04", title: "config", file: "content/td_00_year_config.md" },
+                    { id: "brazil_td_05", title: "traffic", file: "content/td_00_year_traffic.md" },
+                    { id: "brazil_td_06", title: "fuel_eval", file: "content/td_00_year_fuel_eval.md" },
+                    { id: "brazil_td_07", title: "exhaust", file: "content/td_00_year_ex.md" },
+                    { id: "brazil_td_08", title: "evaporative", file: "content/td_00_year_ev.md" },
+                    { id: "brazil_td_09", title: "wear", file: "content/td_00_year_wear.md" },
+                    { id: "brazil_td_10", title: "post", file: "content/td_00_year_post.md" },
+                    { id: "brazil_td_11", title: "plots", file: "content/td_00_year_plot.md" },
+                    { id: "brazil_td_12", title: "post_roads", file: "content/td_00_year_post_roads.md" },
+                    { id: "brazil_td_13", title: "post_grids", file: "content/td_00_year_post_grids.md" },
+                    { id: "brazil_td_14", title: "mechanism", file: "content/td_00_year_mech.md" },
+                    { id: "brazil_td_15", title: "wrf", file: "content/td_00_year_wrf.md" }
                 ]
             }        
         ]
