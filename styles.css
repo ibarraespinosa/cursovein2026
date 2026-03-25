@@ -70,6 +70,7 @@ h1, h2, h3, h4 {
 .gradient-text {
     background: linear-gradient(to right, var(--accent-color), var(--accent-cyan));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -336,6 +337,83 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Discord Invite Section */
+.discord-invite {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.discord-container {
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.1) 0%, rgba(63, 185, 80, 0.1) 100%);
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.discord-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(88, 101, 242, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.discord-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: #5865F2;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    box-shadow: 0 8px 24px rgba(88, 101, 242, 0.4);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.discord-container:hover .discord-icon-wrapper {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.discord-icon {
+    color: white;
+}
+
+.discord-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.discord-content p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-discord {
+    background-color: #5865F2;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 14px 0 rgba(88, 101, 242, 0.39);
+}
+
+.btn-discord:hover {
+    background-color: #4752C4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
 }
 
 /* Responsive */
