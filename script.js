@@ -18,6 +18,11 @@ const courseStructure = [
                 file: "content/lesson1.md",
             },
             { 
+                id: "lesson2", 
+                title: "Onde rodar?", 
+                file: "content/lesson2.md",
+            },
+            { 
                 id: "brazil_bu", 
                 title: "brazil_bu", 
                 file: "content/bu_00.md",
