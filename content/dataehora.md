@@ -21,7 +21,7 @@ O curso vai ser ministrado online e os participantes vao rece ver o link para pa
 - 09:00 - 10:20 - Post & plots
 - 10:20 - 10:30 - Coffee break
 - 10:30 - 10:50 - Palestra [Janaina Pinto](https://scholar.google.com/citations?user=PWyB5QUAAAAJ&hl=pt-BR) (15 min + 5 perguntas)
-- 10:50 - 11:20 - Palestra [Daniel Schuch](https://scholar.google.com/citations?hl=en&user=ss9NS10AAAAJ&)
+- 10:50 - 11:20 - Palestra [Daniel Schuch](https://scholar.google.com/citations?hl=en&user=ss9NS10AAAAJ&view_op=list_works&sortby=pubdate) (15 min + 5 perguntas)
 - 11:20 - 12:00 - Chemical mechanism
 - 12:00 - 13:00 - Almoço
 - 13:00 - 13:30 - WRF-Chem
