@@ -18,17 +18,15 @@ O curso vai ser ministrado online e os participantes vao rece ver o link para pa
 
 ## Segundo dia - Quinta feira 9 de Abril 09:00 AM - 16:00 PM
 
-- 09:00 - 09:50 - Post
-- 09:50 - 10:00 - Coffee break
-- 10:00 - 12:00 - plots
+- 09:00 - 10:20 - Post & plots
+- 10:20 - 10:30 - Coffee break
+- 10:30 - 10:50 - Palestra [Janaina Pinto](https://scholar.google.com/citations?user=PWyB5QUAAAAJ&hl=pt-BR) (15 min + 5 perguntas)
+- 10:50 - 11:20 - Palestra [Daniel Schuch](https://scholar.google.com/citations?hl=en&user=ss9NS10AAAAJ&)
+- 11:20 - 12:00 - Chemical mechanism
 - 12:00 - 13:00 - Almoço
-- 13:00 - 14:00 - Chemical mechanism
-- 14:00 - 14:30 - WRF-Chem
-- 14:30 - 14:50 - Palestra [Janaina Pinto](https://scholar.google.com/citations?user=PWyB5QUAAAAJ&hl=pt-BR) (15 min + 5 perguntas)
-- 14:50 - 15:10 - Coffee break
-- 15:10 - 15:30 - Palestra [Daniel Schuch](https://scholar.google.com/citations?hl=en&user=ss9NS10AAAAJ&view_op=list_works&sortby=pubdate) (15 min + 5 perguntas)
-- 15:30 - 15:55 - Apresentacao de resultados.
-- 15:55 - 16:00 - Encerramento
+- 13:00 - 13:30 - WRF-Chem
+- 13:30 - 14:30 - Apresentacao de resultados.
+- 14:30 - 15:00 - Encerramento
 
 # Agredecimentos e equipe
 
