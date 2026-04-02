@@ -35,8 +35,8 @@ O curso vai ser ministrado online e os participantes vao rece ver o link para pa
 Obrigado!
 
 - [Sergio Ibarra Espinosa](https://ibarraespinosa.github.io/)
-- Leila Martins.
-- Iara da Silva.
+- [Leila Martins](https://scholar.google.com/citations?user=ZESEGv4AAAAJ&hl=en&oi=ao).
+- [Iara da Silva](https://scholar.google.com/citations?user=PXOemrQAAAAJ&hl=en&oi=sra).
 
 ## Referências e bibliografia
 
