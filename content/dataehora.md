@@ -9,9 +9,9 @@ O curso vai ser ministrado online e os participantes vao rece ver o link para pa
 - 09:35 - 09:55 - Palestra [Joao Bazzo](https://joaobazzo.netlify.app/) (15 min + 5 perguntas)
 - 09:55 - 10:00 - Coffee break
 - 10:00 - 12:00 - main.R e config.R
-- 12:00 - 13:30 - Almoço
-- 13:30 - 14:00 - Net (modelagem, gtfs, gps, topdown)
-- 14:00 - 14:50 - Traffic e fuel_eval
+- 12:00 - 13:00 - Almoço
+- 13:00 - 14:00 - Net (modelagem, gtfs, gps, topdown) & Traffic
+- 14:00 - 14:50 - Fuel_eval
 - 14:50 - 15:00 - Coffee break
 - 15:00 - 15:45 - Exhaust, Evaporativas e wear
 - 15:45 - 16:00 - Tarefas para a proxima semana, grupos e apresentacao
