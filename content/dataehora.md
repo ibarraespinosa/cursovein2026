@@ -5,8 +5,8 @@ O curso vai ser ministrado online e os participantes vao rece ver o link para pa
 ## Primeiro dia - Quinta feira 2 de Abril 09:00 AM - 16:00 PM
 
 - 09:00 - 09:15 - Boas vindas e Introdução ao VEIN
-- 09:15 - 09:35 - Palestra [Sergio Ibarra Espinosa](https://scholar.google.com/citations?hl=en&user=8ohZGHEAAAAJ&view_op=list_works&sortby=pubdate) (15 min + 5 perguntas)
-- 09:35 - 09:55 - Palestra [Joao Bazzo](https://scholar.google.com/citations?user=PWyB5QUAAAAJ&hl=pt-BR) (15 min + 5 perguntas)
+- 09:15 - 09:35 - Palestra [Sergio Ibarra Espinosa](https://ibarraespinosa.github.io) (15 min + 5 perguntas)
+- 09:35 - 09:55 - Palestra [Joao Bazzo](https://joaobazzo.netlify.app/) (15 min + 5 perguntas)
 - 09:55 - 10:00 - Coffee break
 - 10:00 - 12:00 - main.R e config.R
 - 12:00 - 13:30 - Almoço
