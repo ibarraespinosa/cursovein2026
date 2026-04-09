@@ -22,13 +22,13 @@ O curso vai ser ministrado online e os participantes vao rece ver o link para pa
 - 09:50 - 10:00 - *Coffee break*
 - 10:00 - 11:20 - Plots & Especiacao
 - 11:20 - 11:40 - Palestra [Janaina Pinto](https://scholar.google.com/citations?user=PWyB5QUAAAAJ&hl=pt-BR) (15 min + 5 perguntas)
-- 11:40 - 12:00 - Palestra [Daniel Schuch](https://scholar.google.com/citations?hl=en&user=ss9NS10AAAAJ&view_op=list_works&sortby=pubdate) (15 min + 5 perguntas)
 - 12:00 - 13:00 - *Almoço*
-- 13:00 - 13:40 - Chemical mechanism
-- 14:40 - 15:20 - WRF-Chem
-- 15:20 - 15:30 - *Coffee break*
-- 15:30 - 16:45 - Apresentacao de resultados.
-- 16:45 - 17:00 - Encerramento
+- 13:00 - 13:20 - Palestra [Daniel Schuch](https://scholar.google.com/citations?hl=en&user=ss9NS10AAAAJ&view_op=list_works&sortby=pubdate) (15 min + 5 perguntas)
+- 13:20 - 14:20 - Chemical mechanism
+- 14:20 - 14:50 - WRF-Chem
+- 14:50 - 15:00 - *Coffee break*
+- 15:00 - 15:45 - Apresentacao de resultados.
+- 15:45 - 16:00 - Encerramento
 
 # Agredecimentos e equipe
 
